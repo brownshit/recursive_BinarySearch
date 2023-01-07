@@ -12,6 +12,7 @@ def sortHelper(lst,l,h):
                 indexofMIN = i
         lst[indexofMIN] = lst[l]
         lst[l] = min
+        sortHelper(lst,l+1,h)
 
 def main():
     lst = [3,2,1,5,9,8]
@@ -23,6 +24,6 @@ def main():
     for i in range(list_size):
         mlist.append(eval(input("input integer : ")))
     print(mlist)
-    newlist = sort(mlist)
-    print(newlist)
+    sort(mlist)
+    print(mlist)
 main()
